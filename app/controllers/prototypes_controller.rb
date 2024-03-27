@@ -23,8 +23,6 @@ class PrototypesController < ApplicationController
 
     @comment = Comment.new
     @comments = @prototype.comments.includes(:user)
-
-    @user = @prototype.user # 修正を加えた結果、使用しなくなった変数であるが、本当に使用していないか自信がないため消すのが怖い
   end
 
   def edit
